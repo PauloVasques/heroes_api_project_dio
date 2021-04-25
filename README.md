@@ -1,31 +1,21 @@
-<h1>Inter Java Developer</h1>
-<h2>Projeto da Digital Innovation: Expert class - Desenvolvimento de testes unitários para validar uma API REST de gerenciamento de estoques de cerveja.</h2>
+#Inter Java Developer
+##Projeto da Digital Innovation: Criando seu gerenciador de super heróis da Marvel e da DC em uma API reativa com Spring Boot
 
-Projeto realizado para estudo de desenvolvimento de código baseado em TDD.
+Projeto realizado para estudo de desenvolvimento de API Responsiva com Webflux.
 
-Foram incluídos novos atributos da Entity Beer, a funcionalidade Decrement e os testes unitários para esta.
+### Customizações: 
+* Criados diferentes heróis; 
+* Novos testes (listAll e createHero);
+* Caminho da API padronizada para boas práticas.
 
-Para executar o projeto no terminal, digite o seguinte comando:
 
-```shell script
-mvn spring-boot:run 
+###Caminho da API
+```
+http://localhost:8080/api/v1/heroes
 ```
 
-Para executar a suíte de testes desenvolvida durante a live coding, basta executar o seguinte comando:
+### Instruções Padrões sobre o DynamoDB:
 
-```shell script
-mvn clean test
-```
+Na pasta em que o jar está baixado: java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 
-Após executar o comando acima, basta apenas abrir o seguinte endereço e visualizar a execução do projeto:
-
-```
-http://localhost:8080/api/v1/beers
-```
-
-Requisitos necessários para rodar o projeto:
-
-* Java 14 ou versões superiores.
-* Maven 3.6.3 ou versões superiores.
-* Intellj IDEA Community Edition ou sua IDE favorita.
-* Controle de versão GIT.
+Para listar as tabelas criadas:  aws dynamodb list-tables --endpoint-url http://localhost:8000
